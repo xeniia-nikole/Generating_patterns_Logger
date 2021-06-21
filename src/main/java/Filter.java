@@ -9,7 +9,7 @@ public class Filter {
         this.treshold = treshold;
     }
 
-    public static List<Integer> filterOut(List<Integer> source, int filter) {
+    public static List<Integer> filterOut(List<Integer> source, int filter) throws InterruptedException {
         Logger logger = Logger.getInstance();
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < source.size(); i++) {

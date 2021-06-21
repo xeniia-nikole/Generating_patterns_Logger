@@ -1,5 +1,6 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.TimeUnit;
 
 public class Logger {
     private int num = 1;
@@ -23,7 +24,8 @@ public class Logger {
         return logger;
     }
 
-    public void log(String msg) {
+    public void log(String msg) throws InterruptedException {
         System.out.println("[" + LocalDateTime.now().format(formatter) + " #" + num++ + "] " + msg);
+        TimeUnit.SECONDS.sleep(1);
     }
 }
